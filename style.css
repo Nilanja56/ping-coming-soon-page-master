@@ -18,6 +18,7 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  overflow: hidden;
 }
 
 #logo {
@@ -58,12 +59,14 @@ form {
 
 #email {
   border: 1px solid #c2d3ff;
+  text-align: left;
+  text-indent: 25px;
 }
 
 #email::placeholder {
   color: #c2d3ff;
   font-size: 0.9rem;
-  padding-left: 40px;
+  padding-left: 20px;
   font-family: "Libre Franklin", sans-serif;
 }
 
@@ -71,10 +74,10 @@ form {
 button {
   height: 40px;
   width: 260px;
-  border-radius: 20px;
+  border-radius: 18px;
 }
 
-#submit {
+button {
   background-color: #4f7df3;
   border: none;
   color: #ffffff;
@@ -86,6 +89,13 @@ button {
 button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+#error {
+  margin-top: 2px;
+  color: #ff5263;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 #illustration {
@@ -170,8 +180,20 @@ footer {
     width: 300px;
   }
 
+  #email:focus {
+    outline: none;
+  }
+
   #submit {
     width: 150px;
+  }
+
+  #error {
+    margin-top: 2px;
+    color: #ff5263;
+    font-size: 0.8rem;
+    text-align: start;
+    padding-left: 10px;
   }
 
   #illustration {
@@ -181,7 +203,7 @@ footer {
   }
 
   footer {
-    width: 375px;
+    width: 100%;
     margin-top: 50px;
     height: 100%;
     display: flex;

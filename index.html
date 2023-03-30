@@ -25,6 +25,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main>
@@ -38,14 +40,18 @@
         <p id="subscribe">Subscribe and get notified</p>
       </section>
 
-      <form>
-        <input
-          type="email"
-          placeholder="Your email address..."
-          name="yourEmail"
-          id="email"
-        />
-        <button id="submit">Notify Me</button>
+      <form class="validateEmail">
+        <div class="case">
+          <input
+            type="email"
+            placeholder="Your email address..."
+            name="email"
+            id="email"
+          />
+          <p id="error"></p>
+        </div>
+
+        <button type="button" id="submit">Notify Me</button>
       </form>
 
       <img
